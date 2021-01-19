@@ -25,7 +25,11 @@ The code in this repository is organized as follows:
 * *test* - contains code used for testing. 
 
 The file *run_experiments.bat* allows the experiments to be re-run on a Windows machine. To run on another OS just open this file and manually
-run the python and file deletion commands in the order specified, or else simply copy them into a new script and run.
+run the python and file deletion commands in the order specified, or else simply copy them into a new script and run. As an additional note, this
+code was written before [DOcplex](https://ibmdecisionoptimization.github.io/docplex-doc/) was widely used and requires the CPLEX solver output
+format to be the same as CPLEX 12.4. You may need to make small changes to the ProblemExecutor.opl_solve method in the
+[/data/experiment_runner.py](https://github.com/chrisgarcia001/Crisis-Volunteer-Resource-Allocation/blob/main/src/experiment_runner.py) file for later
+versions of CPLEX.
 
 #### Paper and Citation
 The full paper can be found [here.](https://www.emerald.com/insight/content/doi/10.1108/JHLSCM-02-2018-0019/full/html)
