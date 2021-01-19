@@ -10,7 +10,7 @@ renewable resources such as bulldozers and consumable resources such as water) a
 In this work we develop a multi-objective mixed integer programming (MIP) framework for optimally allocating and re-allocating resources and personnel with different skills in a crisis. This 
 framework also takes into account a wide variety of volunteer constraints such as availability, skills, the need to work with specific individuals or in groups, and more. 
 Rather than relying on stochastic characterizations of the changing needs (which requires data not often available until the crisis is over) this framework allows for re-planning
-in a way that best meets the new demands while minimizing the disruption to current plans. We showed that IP is capable in practice of solving both the initial planning problem
+in a way that best meets the new demands while minimizing the disruption to current plans. We showed that MIP is capable in practice of solving both the initial planning problem
 as well as the re-planning in very short amounts of time for realistically large problems covering a wide variety of characteristics.
 
 
