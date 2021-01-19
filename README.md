@@ -7,7 +7,7 @@ information comes to light in the aftermath. Crisis responses need to be put tog
 renewable resources such as bulldozers and consumable resources such as water) as well as paid staff and volunteers with differing skills and capabilities. 
 
 #### Solution Approach
-In this work we develop a multi-objective integer programming (IP) framework for optimally allocating and re-allocating resources and personnel with different skills in a crisis. This 
+In this work we develop a multi-objective mixed integer programming (MIP) framework for optimally allocating and re-allocating resources and personnel with different skills in a crisis. This 
 framework also takes into account a wide variety of volunteer constraints such as availability, skills, the need to work with specific individuals or in groups, and more. 
 Rather than relying on stochastic characterizations of the changing needs (which requires data not often available until the crisis is over) this framework allows for re-planning
 in a way that best meets the new demands while minimizing the disruption to current plans. We showed that IP is capable in practice of solving both the initial planning problem
@@ -17,7 +17,7 @@ as well as the re-planning in very short amounts of time for realistically large
 #### Code Organization and How to Run
 The code in this repository is organized as follows: 
 
-* *models* - contains the IP models in OPL format
+* *models* - contains the MIP models in OPL format
 * *params* - contains the parameter files for generating problem classes and running the experiments. The *base* subfolder contains the parameters for experiments without
               transportation concerns, and the *transp* subfolder contains parameters for experiments involving transportation.
 * *solutions* - contains the output from the experiments, using the same subfolder structure as above.
@@ -26,7 +26,7 @@ The code in this repository is organized as follows:
 
 The file *run_experiments.bat* allows the experiments to be re-run on a Windows machine. To run on another OS just open this file and manually
 run the python and file deletion commands in the order specified, or else simply copy them into a new script and run. As an additional note, this
-code was written before [DOcplex](https://ibmdecisionoptimization.github.io/docplex-doc/) was widely used and requires the CPLEX solver output
+code was written before [DOcplex](https://ibmdecisionoptimization.github.io/docplex-doc/) was widely used and therefore requires the CPLEX solver output
 format to be the same as CPLEX 12.4. You may need to make small changes to the ProblemExecutor.opl_solve method in the
 [/data/experiment_runner.py](https://github.com/chrisgarcia001/Crisis-Volunteer-Resource-Allocation/blob/main/src/experiment_runner.py) file for later
 versions of CPLEX.
