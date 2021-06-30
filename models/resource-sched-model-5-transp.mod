@@ -84,7 +84,7 @@
    	   x[i][j] + x[i][k] - 1 <= b[i][j][k];  // Constraint 21
    }
    
-   // --- CAUSES CONFLICT - NEEDS DEBUGGING: --------
+   
    forall (i in R, k in Shifts) {
      // E[T][Shifts]
      sum (j in T) E[j][k] * x[i][j] == 1;  // Constraint 22
